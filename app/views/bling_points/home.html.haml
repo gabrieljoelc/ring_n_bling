@@ -1,6 +1,6 @@
 .text-center
   %h1 Will you marry me, Ashley?
-  %h2 $8000 is the goal. #{number_to_currency(8000 - @bling_points.map(&:value).sum)} to go!
+  %h2 $5000 is the goal. #{number_to_currency(5000 - @bling_points.map(&:value).sum)} to go!
 
 .progress.progress-striped{ style: 'height: 100px;' }
   - @bling_points.each do |point|
