@@ -1,3 +1,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'bootstrap-slider';
+
+.progress-bar:hover {
+  background-color: #080;
+}

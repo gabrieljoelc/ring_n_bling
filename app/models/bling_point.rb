@@ -1,5 +1,5 @@
 class BlingPoint < ActiveRecord::Base
   def percent
-    value / 5000.0 * 100.0
+    value / 8000.0 * 100.0
   end
 end

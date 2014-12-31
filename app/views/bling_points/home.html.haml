@@ -1,4 +1,11 @@
-.progress.progress-striped.vertical
+.text-center
+  %h1 Will you marry me, Ashley?
+  %h2 $8000 is the goal. #{number_to_currency(8000 - @bling_points.map(&:value).sum)} to go!
+
+.progress.progress-striped{ style: 'height: 100px;' }
   - @bling_points.each do |point|
-    .progress-bar.progress-bar-success{ style: "width: #{point.percent}%", title: "#{number_to_currency(point.value)} (#{point.percent}% there!)" }
+    .progress-bar.progress-bar-success{ style: "width: #{point.percent}%", 'data-placement' => 'bottom', 'data-toggle' => 'tooltip', title: "#{number_to_currency(point.value)} (#{point.percent}%)" }
       %span.sr-only #{point.percent}%
+
+:javascript
+  $('[data-toggle="tooltip"]').tooltip()
