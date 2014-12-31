@@ -1,6 +1,10 @@
 class BlingPointsController < ApplicationController
   before_action :set_bling_point, only: [:show, :edit, :update, :destroy]
 
+  def home
+    @bling_points = BlingPoint.all
+  end
+
   # GET /bling_points
   # GET /bling_points.json
   def index

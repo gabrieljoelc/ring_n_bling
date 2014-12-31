@@ -1,0 +1,4 @@
+.progress.progress-striped.vertical
+  - @bling_points.each do |point|
+    .progress-bar.progress-bar-success{ style: "width: #{point.percent}%", title: "#{number_to_currency(point.value)} (#{point.percent}% there!)" }
+      %span.sr-only #{point.percent}%
