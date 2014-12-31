@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Value:
+  = @bling_point.value
+
+= link_to 'Edit', edit_bling_point_path(@bling_point)
+\|
+= link_to 'Back', bling_points_path

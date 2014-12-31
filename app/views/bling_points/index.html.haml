@@ -1,0 +1,21 @@
+%h1 Listing bling_points
+
+%table
+  %thead
+    %tr
+      %th Value
+      %th
+      %th
+      %th
+
+  %tbody
+    - @bling_points.each do |bling_point|
+      %tr
+        %td= bling_point.value
+        %td= link_to 'Show', bling_point
+        %td= link_to 'Edit', edit_bling_point_path(bling_point)
+        %td= link_to 'Destroy', bling_point, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Bling point', new_bling_point_path
