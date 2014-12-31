@@ -13,6 +13,10 @@
 
 ActiveRecord::Schema.define(version: 20141231071106) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "hstore"
+
   create_table "bling_points", force: true do |t|
     t.integer  "value"
     t.datetime "created_at"
