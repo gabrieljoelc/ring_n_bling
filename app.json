@@ -1,0 +1,23 @@
+{
+  "name":"ring_n_bling",
+  "scripts":{},
+  "env":{
+    "FOO":"OUCH",
+    "LANG":{
+      "required":true
+    },
+    "RACK_ENV":{
+      "required":true
+    },
+    "RAILS_ENV":{
+      "required":true
+    },
+    "SECRET_KEY_BASE":{
+      "required":true
+    }
+  },
+  "addons":[
+    "papertrail",
+    "heroku-postgresql"
+  ]
+}
